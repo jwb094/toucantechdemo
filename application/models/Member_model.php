@@ -9,7 +9,7 @@ class Member_model extends CI_Model{
    public function get_members(){
         $input= $this->input->post('school');
         $query = $this->db->get_where('members',array('school' => $input));
-        return $query->result();
+        return $query->result_array();
 
     }
 

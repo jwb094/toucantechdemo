@@ -23,10 +23,10 @@ class Members extends CI_Controller {
 
     }
 
-    public function display(){
+    public function search(){
         
         $this->load->view('templates/header');
-        $this->load->view('members/display');
+        $this->load->view('members/search');
         $this->load->view('templates/footer');
     }
 
@@ -37,11 +37,10 @@ class Members extends CI_Controller {
             show_404();
         }
 
-        $data['title'] = $data['post'];
-       //echo 'its working YEAH'.json_encode($data['post']);
+        $data['title'] = 'Search Results';
         $this->load->view('templates/header');
-        $this->load->view('members/display');
-        echo 'its working YEAH'.json_encode($data['title']);
+        $this->load->view('members/display',$data);
+        //echo 'its working YEAH'.json_encode($data['title']);
         $this->load->view('templates/footer');
 
     }

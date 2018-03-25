@@ -19,7 +19,7 @@
         <a class="nav-link" href="<?php echo base_url(); ?>members/create">Create A member</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url(); ?>members/display">Search Member</a>
+        <a class="nav-link" href="<?php echo base_url(); ?>members/search">Search Member</a>
       </li>
     </ul>
   </div>
