@@ -1,7 +1,7 @@
 <?php
 
 class Members extends CI_Controller {
-
+    
     public function create(){
 
 
@@ -9,7 +9,7 @@ class Members extends CI_Controller {
         
         $this->form_validation->set_rules('name', 'Name','required');
         $this->form_validation->set_rules('email', 'Email','required');
-        // $this->form_validation->set_rules('school', 'School','required');
+        $this->form_validation->set_rules('school', 'School','required');
 
         if($this->form_validation->run() === FALSE){
             $this->load->view('templates/header');
@@ -17,12 +17,13 @@ class Members extends CI_Controller {
             $this->load->view('templates/footer');
         } else {
             $this->member_model->create_member();
-            redirect('/');       
+            redirect('members/search');       
         
         }
 
     }
 
+    
     public function search(){
         
         $this->load->view('templates/header');
@@ -40,7 +41,6 @@ class Members extends CI_Controller {
         $data['title'] = 'Search Results';
         $this->load->view('templates/header');
         $this->load->view('members/display',$data);
-        //echo 'its working YEAH'.json_encode($data['title']);
         $this->load->view('templates/footer');
 
     }
