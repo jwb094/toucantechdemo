@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# toucantechdemo
-=======
 # toucantechdemo
 
 # Program Used : Xampp
