@@ -4,7 +4,7 @@
 
 Xampp with phpmyAdmin(MySql)
 
-### Tables:
+## Tables:
 CREATE TABLE schoolmembers(
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 member VARCHAR(255) NOT NULL,
