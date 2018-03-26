@@ -1,16 +1,13 @@
 <br>
 <h2>Search Members</h2>
-
-
 <?php echo form_open('members/getRecords'); ?>
 <br><br>
   <div class="form-group">
-    <label>School</label>
+  <label>School</label>
     <select name="school" class="form-control">
-  			<option value="University of Essex">University of Essex</option>
-  			<option value="Abbrey Hall">Abbrey Hall</option>
-  			<option value="Concord College">Concord College</option>
-  			<option value="Roedan School">Roedan School</option>
+      <?php foreach($schools as $data) :?>
+        <option value="<?php echo $data['schoolid'];?>"><?php echo $data['school'];?></option>
+       <?php endforeach; ?>
 			</select>
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
